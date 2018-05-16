@@ -22,4 +22,4 @@ clone项目到本地后，先修改 src/main/resources/sql/jdbc.properties 里�
 然后自行配置tomcat，运行，访问 http://localhost:8080/bookStore/testPage?id=1 ，如果网页出现 “testName” ，那么说明spring配置成功。<br/>
 
 # 关于如何使用github进行团队开发<br/>
-待续<br/>
+1.大家在本地开发时，要新建一个分支进行开发<br/>
