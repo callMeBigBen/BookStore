@@ -22,9 +22,18 @@ clone项目到本地后，先修改 src/main/resources/sql/jdbc.properties 里�
 然后自行配置tomcat，运行，访问 http://localhost:8080/bookStore/testPage?id=1 ，如果网页出现 “testName” ，那么说明spring配置成功。<br/>
 
 # 关于如何使用github进行团队开发<br/>
-1.大家在本地开发时，要新建一个分支进行开发<br/>
-
-2.在新建的分支上开发到一定程度后（比如完成某些比较完整的功能后），可以尝试与远程仓库合并：<br/>
-①先在本地更新本地master分支到最新（git pull）<br/>
-②然后，在本地将开发分支与本地master分支合并(git merge)，测试无误后，就可以向远程推送master分支了。<br/>
-当然，过程肯定没这么简单，合并分支的时候，可能需要解决冲突等，可以大家一起商量。<br/>
+0.github上的master分支是我们项目的稳定版本，不要随意去更改其中的代码<br/>
+1.先在本地 git clone git@github.com:mmlinhang/BookStore.git <br/>
+2.然后 cd BookStore ，这就是我们的项目根目录了<br/>
+3.然后 git checkout -b dev ：新建分支，这是我们的开发分支，大家在这个分支上进行开发，不要轻易改动master分支代码。<br/>
+4.在dev分支上开发到一定程度后（比如完成某些比较完整的功能后），可以尝试合并代码到远程仓库，合并步骤如下：<br/>
+  ①先切换到master分支：git checkout master<br/>
+  ②然后再更新master为最新的版本（因为可能有其他人已经在远程master做了更新）：git pull origin master<br/>
+  ③然后再将dev分支合并到master分支上：git merge dev。  <br/>
+   merge可能（大概率）会出现冲突，这时候需要你手动进行合并，合并完之后再 git add . 和 git commit -m "这个字符串自行编写"<br/>
+   注意：你整合代码之后需要进行测试，不仅要测试自己写的功能，还要测试别人写的功能是否受到你的影响<br/>
+  ⑤更新远程仓库：git push origin master<br/>
+   这一步可能也会出现冲突（因为可能有人在你git pull之后，又在远程master上进行了更新），这时候你就需要继续git pull 然后解决冲突， 最后再git push了<br/>
+   
+tips：这些过程中，最麻烦的可能就是合并这一步了，合并的时候可以和写相关代码的人讨论<br/><br/>
+      有些地方没写清楚，大家不懂的可以百度或者一起讨论
