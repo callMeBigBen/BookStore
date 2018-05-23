@@ -57,6 +57,7 @@ CREATE TABLE afterService (
   bookId INT(10) NOT NULL,
   num INT(5) NOT NULL default 1,
   type INT(1) NOT NULL,
+  reason VARCHAR(5000),
   PRIMARY KEY(id),
   CONSTRAINT afterService_user FOREIGN KEY(id)
     REFERENCES user(id),
