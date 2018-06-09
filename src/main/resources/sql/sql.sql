@@ -5,7 +5,7 @@ CREATE TABLE user (
   id INT(10) NOT NULL AUTO_INCREMENT,
   userName VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
-  phone INT(11),
+  phone VARCHAR(11),
   PRIMARY KEY(id)
 )engine = InnoDB default charset=utf8;
 
@@ -31,7 +31,7 @@ CREATE TABLE t_order (
   id INT(10) NOT NULL AUTO_INCREMENT,
   address VARCHAR(500) NOT NULL default '',
   totalPrice DOUBLE NOT NULL,
-  state INT(1) NOT NULL,
+  state VARCHAR(255) NOT NULL,
   userId INT(10) NOT NULL,
   PRIMARY KEY(id),
   CONSTRAINT order_user FOREIGN KEY(userId)
@@ -59,7 +59,7 @@ CREATE TABLE afterService (
   num INT(5) NOT NULL default 1,
   type INT(1) NOT NULL,
   reason VARCHAR(5000) NOT NULL default '',
-  state INT(1) NOT NULL,
+  state VARCHAR(255) NOT NULL,
   orderItemId INT(10) NOT NULL,
   PRIMARY KEY(id),
   CONSTRAINT afterService_orderItem FOREIGN KEY(orderItemId)

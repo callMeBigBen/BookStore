@@ -37,11 +37,11 @@ public class AfterserviceDao
 
     public void add(AfterService afterService)
     {
-        String sql = "INSERT INTO afterService (id, userId, orderId, bookId, num, type, reason)" +
-                "Values(?, ?, ?, ?, ?, ?, ?)";
-        Object[] args = new Object[]{afterService.getId(), afterService.getUserId(), afterService.getOrderId(),
-                                    afterService.getBookId(), afterService.getNum(), afterService.getType(),
-                                    afterService.getReason()};
+        String sql = "INSERT INTO afterService (id, num, type, reason, state, orderItemId)" +
+                "Values(?, ?, ?, ?, ?, ?)";
+        Object[] args = new Object[]{afterService.getId(), afterService.getNum(),
+                                    afterService.getType(), afterService.getReason(),
+                                    afterService.getState(), afterService.getOrderItemId()};
 
         jdbcTemplate.update(sql, args);
     }
@@ -56,11 +56,11 @@ public class AfterserviceDao
     public void update(AfterService afterService)
     {
         String sql = "UPDATE afterService " +
-                        "SET userId = ?, orderId = ?, bookId = ?, num = ?, type = ?, reason = ? " +
+                        "SET num = ?, type = ?, reason = ?, state = ?, orderItemId = ?" +
                         "WHERE id = ?";
-        Object[] args = new Object[]{afterService.getUserId(), afterService.getOrderId(),
-                afterService.getBookId(), afterService.getNum(), afterService.getType(),
-                afterService.getReason(), afterService.getId()};
+        Object[] args = new Object[]{afterService.getNum(), afterService.getType(),
+                afterService.getReason(), afterService.getState(),
+                afterService.getOrderItemId(), afterService.getId()};
 
         jdbcTemplate.update(sql, args);
     }

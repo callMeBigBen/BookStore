@@ -1,6 +1,8 @@
 package bookStore.controller;
 
+import bookStore.domain.OrderItem;
 import bookStore.service.AfterserviceService;
+import bookStore.service.OrderItemService;
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,14 +13,17 @@ public class AfterserviceController
 {
     @Autowired
     private AfterserviceService afterserviceService;
+    @Autowired
+    private OrderItemService orderItemService;
 
-    @RequestMapping("afterService")
-    public ModelAndView index()
+    @RequestMapping("/afterServiceRequestPage")
+    public ModelAndView afterServiceRequestPage(int orderItemId)
     {
-        //afterserviceService.list();
+        OrderItem orderItem = orderItemService.get(orderItemId);
 
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("afterService/afterServiceContainer");
+        mv.addObject("orderItem",orderItem);
+        mv.setViewName("afterService/afterServiceRequestPage");
 
         return mv;
     }

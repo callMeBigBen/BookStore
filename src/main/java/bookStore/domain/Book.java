@@ -4,63 +4,58 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Book
 {
-    public String getBookId()
-    {
-        return bookId;
+    private int id;
+    private String bookName;
+    private String description;
+    private int remainNum;
+    private double price;
+    private int categoryId;
+
+    public int getId() {
+        return id;
     }
 
-    public void setBookId(String bookId)
-    {
-        this.bookId = bookId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    private String bookId;
-
-    public String getName()
-    {
-        return name;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setName(String name)
-    {
-        this.name = name;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    private String name;
+    public String getDescription() {
+        return description;
+    }
 
-    public String getRemainNum()
-    {
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getRemainNum() {
         return remainNum;
     }
 
-    public void setRemainNum(String remainNum)
-    {
+    public void setRemainNum(int remainNum) {
         this.remainNum = remainNum;
     }
 
-    private String remainNum;
-
-    public String getPrice()
-    {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price)
-    {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    private String price;
-
-    public String getCategory()
-    {
-        return category;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory(String category)
-    {
-        this.category = category;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
-
-    private String category;
 }
