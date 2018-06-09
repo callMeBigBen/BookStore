@@ -30,9 +30,9 @@ CREATE TABLE book (
 CREATE TABLE t_order (
   id INT(10) NOT NULL AUTO_INCREMENT,
   address VARCHAR(500) NOT NULL default '',
-  userId INT(10) NOT NULL,
   totalPrice DOUBLE NOT NULL,
   state INT(1) NOT NULL,
+  userId INT(10) NOT NULL,
   PRIMARY KEY(id),
   CONSTRAINT order_user FOREIGN KEY(userId)
     REFERENCES user(id)
@@ -40,29 +40,28 @@ CREATE TABLE t_order (
 
 CREATE TABLE orderItem (
   id INT(10) NOT NULL AUTO_INCREMENT,
-  bookId INT(10) NOT NULL,
   num INT(3) NOT NULL default 1,
-  orderId INT(10) NOT NULL,
+  isAfterServiceOpened INT(1) NOT NULL default 0,
+  bookId INT(10) NOT NULL,
+  orderId INT(10),
+  userId INT(10) NOT NULL,
   PRIMARY KEY(id),
   CONSTRAINT orderItem_book FOREIGN KEY(bookId)
     REFERENCES book(id),
   CONSTRAINT orderItem_order FOREIGN KEY(orderId)
-    REFERENCES t_order(id)
+    REFERENCES t_order(id),
+  CONSTRAINT orderItem_user FOREIGN KEY(userId)
+    REFERENCES user(id)
 )engine=InnoDB default charset=utf8;
 
 CREATE TABLE afterService (
   id INT(10) NOT NULL AUTO_INCREMENT,
-  userId INT(10) NOT NULL,
-  orderId INT(10) NOT NULL,
-  bookId INT(10) NOT NULL,
   num INT(5) NOT NULL default 1,
   type INT(1) NOT NULL,
-  reason VARCHAR(5000),
+  reason VARCHAR(5000) NOT NULL default '',
+  state INT(1) NOT NULL,
+  orderItemId INT(10) NOT NULL,
   PRIMARY KEY(id),
-  CONSTRAINT afterService_user FOREIGN KEY(id)
-    REFERENCES user(id),
-  CONSTRAINT afterService_order FOREIGN KEY(id)
-    REFERENCES t_order(id),
-  CONSTRAINT afterService_book FOREIGN KEY(id)
-    REFERENCES book(id)
+  CONSTRAINT afterService_orderItem FOREIGN KEY(orderItemId)
+    REFERENCES orderItem(id)
 );
