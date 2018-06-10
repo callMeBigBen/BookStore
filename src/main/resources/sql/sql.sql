@@ -57,7 +57,7 @@ CREATE TABLE orderItem (
 CREATE TABLE afterService (
   id INT(10) NOT NULL AUTO_INCREMENT,
   num INT(5) NOT NULL default 1,
-  type INT(1) NOT NULL,
+  type VARCHAR(255) NOT NULL,
   reason VARCHAR(5000) NOT NULL default '',
   state VARCHAR(255) NOT NULL,
   orderItemId INT(10) NOT NULL,

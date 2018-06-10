@@ -2,6 +2,7 @@ package bookStore.service;
 
 import bookStore.dao.BookDao;
 import bookStore.dao.OrderItemDao;
+import bookStore.domain.AfterService;
 import bookStore.domain.OrderItem;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,10 @@ public class OrderItemService
         orderItem.setBook(bookDao.get(orderItem.getBookId()));
 
         return orderItem;
+    }
+
+    public void closeAfterService(int id)
+    {
+        orderItemDao.closeAfterService(id);
     }
 }

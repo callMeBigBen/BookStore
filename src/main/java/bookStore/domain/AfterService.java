@@ -4,14 +4,26 @@ public class AfterService
 {
     private int id;
     private int num;
-    private int type;
-    private String reason = "";
-    private int state;
+    private String type;
+    private String reason;
+    private String state = HANDLING;
     private int orderItemId;
+    private OrderItem orderItem;
 
-    public static int HANDLING = 1;
-    public static int SUCCESS = 2;
-    public static int FAILED = 3;
+    public static String HANDLING = "待处理";
+    public static String SUCCESS = "成功";
+    public static String FAILED = "失败";
+
+    public static String REFUND = "退款退货";
+    public static String EXCHANGE = "换货";
+
+    public OrderItem getOrderItem() {
+        return orderItem;
+    }
+
+    public void setOrderItem(OrderItem orderItem) {
+        this.orderItem = orderItem;
+    }
 
     public int getId() {
         return id;
@@ -29,11 +41,11 @@ public class AfterService
         this.num = num;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -45,11 +57,11 @@ public class AfterService
         this.reason = reason;
     }
 
-    public int getState() {
+    public String getState() {
         return state;
     }
 
-    public void setState(int state) {
+    public void setState(String state) {
         this.state = state;
     }
 

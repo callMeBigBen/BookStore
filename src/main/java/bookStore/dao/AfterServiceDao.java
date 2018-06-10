@@ -10,7 +10,7 @@ import java.util.List;
 import bookStore.domain.AfterService;
 
 @Repository
-public class AfterserviceDao
+public class AfterServiceDao
 {
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -28,22 +28,30 @@ public class AfterserviceDao
     public AfterService get(int id)
     {
         String sql = "SELECT * FROM afterService WHERE id = ?";
-        RowMapper<AfterService> rowMapper = new BeanPropertyRowMapper<>();
 
-        AfterService afterService = jdbcTemplate.queryForObject(sql, rowMapper, id);
+        AfterService afterService = (AfterService) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper(AfterService.class), id);
 
         return afterService;
     }
 
     public void add(AfterService afterService)
     {
-        String sql = "INSERT INTO afterService (id, num, type, reason, state, orderItemId)" +
-                "Values(?, ?, ?, ?, ?, ?)";
-        Object[] args = new Object[]{afterService.getId(), afterService.getNum(),
+        String sql = "INSERT INTO afterService (num, type, reason, state, orderItemId)" +
+                "Values(?, ?, ?, ?, ?)";
+        Object[] args = new Object[]{afterService.getNum(),
                                     afterService.getType(), afterService.getReason(),
                                     afterService.getState(), afterService.getOrderItemId()};
 
         jdbcTemplate.update(sql, args);
+    }
+
+    public int getIdByOrderItemId(int orderItemId)
+    {
+        String sql = "SELECT id FROM afterService WHERE orderItemId = ?";
+
+        int id = jdbcTemplate.queryForObject(sql, Integer.class, orderItemId);
+
+        return id;
     }
 
     public void delete(int id)
@@ -56,7 +64,7 @@ public class AfterserviceDao
     public void update(AfterService afterService)
     {
         String sql = "UPDATE afterService " +
-                        "SET num = ?, type = ?, reason = ?, state = ?, orderItemId = ?" +
+                        "SET num = ?, type = ?, reason = ?, state = ?, orderItemId = ? " +
                         "WHERE id = ?";
         Object[] args = new Object[]{afterService.getNum(), afterService.getType(),
                 afterService.getReason(), afterService.getState(),

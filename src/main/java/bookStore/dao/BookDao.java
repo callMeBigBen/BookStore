@@ -16,8 +16,7 @@ public class BookDao
     public Book get(int id)
     {
         String sql = "SELECT * FROM book WHERE id = ?";
-        RowMapper<Book> rowMapper = new BeanPropertyRowMapper<>();
-        Book book = jdbcTemplate.queryForObject(sql, rowMapper, id);
+        Book book = (Book) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper(Book.class), id);
 
         return book;
     }
