@@ -10,7 +10,7 @@
 
 <script type="text/javascript">
     $(function(){
-        $(".after-service-request-type-select").click(function(){
+        $(".fter-service-request-type-selecta").click(function(){
             $(".after-service-request-type-selected").removeClass("after-service-request-type-selected");
             $(this).addClass("after-service-request-type-selected");
         });

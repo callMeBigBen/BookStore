@@ -1,5 +1,8 @@
 package bookStore.domain;
 
+import org.springframework.stereotype.Repository;
+
+
 public class AfterService
 {
     private int id;

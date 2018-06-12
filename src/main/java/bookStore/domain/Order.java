@@ -2,17 +2,17 @@ package bookStore.domain;
 
 public class Order
 {
-    public String getOrderId()
+    public String getId()
     {
-        return orderId;
+        return id;
     }
 
-    public void setOrderId(String orderId)
+    public void setId(String id)
     {
-        this.orderId = orderId;
+        this.id = id;
     }
 
-    private String orderId;
+    private String id;
 
     public String getAddress()
     {
@@ -49,4 +49,15 @@ public class Order
     }
 
     private String totalPrice;
+
+    private String state;
+    public String getState()
+    {
+        return state;
+    }
+
+    public void setState(String state)
+    {
+        this.state = state;
+    }
 }

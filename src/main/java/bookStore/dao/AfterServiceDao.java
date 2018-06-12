@@ -18,9 +18,8 @@ public class AfterServiceDao
     public List<AfterService> list()
     {
         String sql = "SELECT * FROM afterService";
-        RowMapper<AfterService> rowMapper = new BeanPropertyRowMapper<>();
 
-        List<AfterService> afterServices = jdbcTemplate.query(sql, rowMapper);
+        List<AfterService> afterServices = jdbcTemplate.query(sql, new BeanPropertyRowMapper(AfterService.class));
 
         return afterServices;
     }
@@ -71,5 +70,10 @@ public class AfterServiceDao
                 afterService.getOrderItemId(), afterService.getId()};
 
         jdbcTemplate.update(sql, args);
+    }
+
+    public void modify(int id,String state){
+        String sql = "Update afterService set state = '"+state+"' where id = "+id;
+        jdbcTemplate.execute(sql);
     }
 }

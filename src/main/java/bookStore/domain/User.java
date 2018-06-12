@@ -4,23 +4,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class User
 {
-    private String username;
+    private String userName;
 
     private String password;
 
     private String phone;
 
-    private String userId;
+    private String id;
 
 
-    public String getUsername()
+    public String getUserName()
     {
-        return username;
+        return userName;
     }
 
-    public void setUsername(String username)
+    public void setUserName(String userName)
     {
-        this.username = username;
+        this.userName = userName;
     }
 
     public String getPassword()
@@ -43,13 +43,13 @@ public class User
         this.phone = phone;
     }
 
-    public String getUserId()
+    public String getId()
     {
-        return userId;
+        return id;
     }
 
-    public void setUserId(String userId)
+    public void setId(String id)
     {
-        this.userId = userId;
+        this.id = id;
     }
 }

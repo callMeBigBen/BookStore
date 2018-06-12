@@ -52,4 +52,8 @@ public class AfterServiceService
         afterserviceDao.update(afterService);
     }
 
+    public void modify(int id,String state){
+        afterserviceDao.modify(id,state);
+    }
+
 }
