@@ -35,7 +35,7 @@
                     <td>${p.reason}</td>
                     <td>${p.type}</td>
                     <td>${p.state}</td>
-                    <td><a href="/BookStore/editAfterServiceRequest?id=${p.id}"><span
+                    <td><a href="editAfterServiceRequest?id=${p.id}"><span
                             class="glyphicon glyphicon-edit"></span></a></td>
                 </tr>
             </c:forEach>
