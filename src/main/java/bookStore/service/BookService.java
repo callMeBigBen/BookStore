@@ -32,4 +32,8 @@ public class BookService
     public void delete(int id){
         bookDao.delete(id);
     }
+
+    public Book getBook(String id){
+        return bookDao.get(Integer.parseInt(id));
+    }
 }
