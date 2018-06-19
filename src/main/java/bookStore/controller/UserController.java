@@ -14,6 +14,16 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping("log")
+    public String logPage() {
+        return "logAndReg/login";
+    }
+
+    @RequestMapping("reg")
+    public String regPage() {
+        return "logAndReg/reg";
+    }
+
     @RequestMapping("loginChecker")
     public String log(@RequestParam("username") String username,
                       @RequestParam("password") String password
@@ -39,5 +49,4 @@ public class UserController {
         userService.add(user);
         return "redirect:index.jsp";
     }
-
 }
