@@ -20,7 +20,7 @@
 
     <div class="register" id="registerDiv" style="visibility: visible">
         <h1>RegisterNow</h1>
-        <form action="/regToBookStore" method="post">
+        <form action="regToBookStore" method="post">
             <input type="text" name="username" placeholder="用户名" required="required"/>
             <input type="password" name="password" placeholder="密码" required="required"/>
             <input type="text" name="phone" placeholder="联系方式" required="required" maxlength="11"/>

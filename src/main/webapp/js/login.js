@@ -557,12 +557,12 @@ update = function () {
 function toRegisterPage()
 {
     document.getElementById("loginDiv").style.visibility = "hidden";
-    document.getElementById("registDiv").style.visibility = "visible";
+    document.getElementById("registerDiv").style.visibility = "visible";
 }
 
 function toLoginPage()
 {
     document.getElementById("loginDiv").style.visibility = "visible";
-    document.getElementById("registDiv").style.visibility = "hidden";
+    document.getElementById("registerDiv").style.visibility = "hidden";
 }
 requestAnimationFrame(update);

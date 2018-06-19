@@ -33,7 +33,7 @@ public class UserDao {
     }
 
     public User getByUserName(String username) {
-        String sql = "SELECT * FROM user WHERE USERNAME = " + username;
+        String sql = "SELECT * FROM user WHERE USERNAME = '" + username + "'";
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
 

@@ -21,7 +21,7 @@
 
     <div class="login" id="loginDiv" style="visibility: visible">
         <h1>BookStore</h1>
-        <form action="/loginChecker" method="post">
+        <form action="loginChecker" method="post">
             <input type="text" name="username" placeholder="用户名" required="required"/>
             <input type="password" name="password" placeholder="密码" required="required"/>
             <br>
