@@ -37,8 +37,11 @@ public class UserDao {
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
 
-        User user = users.get(0);
-        return user;
+        if (users.size() == 1) {
+            User user = users.get(0);
+            return user;
+        }else
+            return null;
     }
 
     public void add(User user) {

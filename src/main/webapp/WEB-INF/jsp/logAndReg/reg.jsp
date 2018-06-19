@@ -26,8 +26,9 @@
             <input type="text" name="phone" placeholder="联系方式" required="required" maxlength="11"/>
             <br>
             <button type="submit" class="btn btn-primary btn-block btn-large" name="register">注册</button>
-            <br>
-            <button type="button" class="btn btn-primary btn-block btn-large" name="toRegister" onclick="toLoginPage()">
+        </form>
+        <form action="/toLog" method="post">
+            <button type="submit" class="btn btn-primary btn-block btn-large" name="toRegister" onclick="toLoginPage()">
                 已有账号
             </button>
         </form>

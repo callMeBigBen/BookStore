@@ -15,15 +15,19 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("loginChecker")
-    public String log(@RequestParam("username") String username,
-                      @RequestParam("password") String password
+    public ModelAndView log(@RequestParam("username") String username,
+                            @RequestParam("password") String password
     ) {
         User user = userService.getByUsername(username);
         if (user != null) {
-            if (user.getPassword() == password) ;
-            return "redirect:index.jsp";
-        }
-        return null;
+            if (user.getPassword().equals(password)) {
+                return new ModelAndView("logAndReg/regFail", "statu", "成功");//登陆成功 TODO
+            } else {
+                String statu = "密码错误";
+                return new ModelAndView("logAndReg/statu", "statu", statu);
+            }
+        } else
+            return new ModelAndView("logAndReg/statu", "statu", "未注册");
     }
 
     @RequestMapping("regToBookStore")
@@ -40,4 +44,14 @@ public class UserController {
         return "redirect:index.jsp";
     }
 
+    @RequestMapping("toReg")
+    public String toReg() {
+        return "logAndReg/reg";
+    }
+
+
+    @RequestMapping("toLog")
+    public String toLog() {
+        return "logAndReg/login";
+    }
 }
