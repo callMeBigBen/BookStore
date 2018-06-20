@@ -13,14 +13,14 @@
     var deleteOrderid = 0;
 
     $(function(){
-        $("a[orderStatus]").click(function(){
-            var orderStatus = $(this).attr("orderStatus");
-            if('all'==orderStatus){
-                $("table[orderStatus]").show();
+        $("a[orderState]").click(function(){
+            var orderState = $(this).attr("orderState");
+            if('所有订单'==orderState){
+                $("table[orderState]").show();
             }
             else{
-                $("table[orderStatus]").hide();
-                $("table[orderStatus="+orderStatus+"]").show();
+                $("table[orderState]").hide();
+                $("table[orderState="+orderState+"]").show();
             }
 
             $("div.orderType div").removeClass("selectedOrderType");
@@ -75,10 +75,11 @@
 
 <div class="boughtDiv">
     <div class="orderType">
-        <div class="selectedOrderType"><a orderStatus="all" href="#nowhere">所有订单</a></div>
-        <div><a  orderStatus="waitPay" href="#nowhere">待付款</a></div>
-        <div><a  orderStatus="waitDelivery" href="#nowhere">待发货</a></div>
-        <div><a  orderStatus="waitConfirm" href="#nowhere">待收货</a></div>
+        <div class="selectedOrderType"><a orderState="所有订单" href="#nowhere">所有订单</a></div>
+        <div><a orderState="待付款" href="#nowhere">待付款</a></div>
+        <div><a orderState="待发货" href="#nowhere">待发货</a></div>
+        <div><a orderState="待收货" href="#nowhere">待收货</a></div>
+        <div><a orderState="完成" href="#nowhere">完成</a></div>
         <div class="orderTypeLastOne"><a class="noRightborder">&nbsp;</a></div>
     </div>
     <div style="clear:both"></div>
@@ -86,64 +87,70 @@
         <table class="orderListTitleTable">
             <tr>
                 <td>书籍</td>
-                <td width="100px">单价</td>
-                <td width="100px">数量</td>
+                <td width="120px">单价</td>
+                <td width="120px">售后服务</td>
+                <td width="120px">数量</td>
                 <td width="120px">实付款</td>
-                <td width="100px">交易操作</td>
+                <td width="120px">交易操作</td>
             </tr>
         </table>
-
     </div>
 
     <div class="orderListItem">
-        <c:forEach items="${os}" var="o">
-            <table class="orderListItemTable" orderStatus="${o.status}" oid="${o.id}">
+        <c:forEach items="${orders}" var="o">
+            <table class="orderListItemTable" orderState="${o.state}" oid="${o.id}">
                 <c:forEach items="${o.orderItems}" var="oi" varStatus="st">
                     <tr class="orderItemProductInfoPartTR" >
-                        <td class="orderItemProductInfoPartTD"><img width="80" height="80" src="img/productSingle_middle/${oi.product.firstProductImage.id}.jpg"></td>
+                        <td class="orderItemProductInfoPartTD" width="120px"><img width="80" height="80" src="../img/books/${oi.book.id}.jpg"></td>
                         <td class="orderItemProductInfoPartTD">
                             <div class="orderListItemProductLinkOutDiv">
-                                <a href="foreproduct?pid=${oi.product.id}">${oi.product.name}</a>
+                                <a href="">${oi.book.bookName}</a>
                             </div>
                         </td>
-                        <td  class="orderItemProductInfoPartTD" width="100px">
-
-                            <div class="orderListItemProductOriginalPrice">￥<fmt:formatNumber type="number" value="${oi.product.originalPrice}" minFractionDigits="2"/></div>
-                            <div class="orderListItemProductPrice">￥<fmt:formatNumber type="number" value="${oi.product.promotePrice}" minFractionDigits="2"/></div>
-
-
+                        <td  class="orderItemProductInfoPartTD" width="120px">
+                            <div class="orderListItemProductPrice">￥<fmt:formatNumber type="number" value="${oi.book.price}" minFractionDigits="2"/></div>
+                        </td>
+                        <td  class="orderItemProductInfoPartTD" width="120px">
+                            <c:choose>
+                                <c:when  test="${oi.isAfterServiceOpened == 1}">
+                                    <a href="../afterServiceRequestPage">申请售后服务</a>
+                                </c:when>
+                                <c:otherwise>
+                                    <c:if test="${oi.isAfterServiceExisted}">
+                                        <a href="../afterServiceStatePage?orderItemId=${oi.id}">查看售后状态</a>
+                                    </c:if>
+                                    <c:if test="${not oi.isAfterServiceExisted}">
+                                        <span>订单未完成，不能申请售后</span>
+                                    </c:if>
+                                </c:otherwise>
+                            </c:choose>
                         </td>
                         <c:if test="${st.count==1}">
 
-                            <td valign="top" rowspan="${fn:length(o.orderItems)}" class="orderListItemNumberTD orderItemOrderInfoPartTD" width="100px">
-                                <span class="orderListItemNumber">${o.totalNumber}</span>
+                            <td valign="top" rowspan="${fn:length(o.orderItems)}" class="orderListItemNumberTD orderItemOrderInfoPartTD" width="120px">
+                                <span class="orderListItemNumber">${o.totalNum}</span>
                             </td>
                             <td valign="top" rowspan="${fn:length(o.orderItems)}" width="120px" class="orderListItemProductRealPriceTD orderItemOrderInfoPartTD">
-                                <div class="orderListItemProductRealPrice">￥<fmt:formatNumber  minFractionDigits="2"  maxFractionDigits="2" type="number" value="${o.total}"/></div>
-                                <div class="orderListItemPriceWithTransport">(含运费：￥0.00)</div>
+                                <div class="orderListItemProductRealPrice">￥<fmt:formatNumber  minFractionDigits="2"  maxFractionDigits="2" type="number" value="${o.totalPrice}"/></div>
                             </td>
-                            <td valign="top" rowspan="${fn:length(o.orderItems)}" class="orderListItemButtonTD orderItemOrderInfoPartTD" width="100px">
-                                <c:if test="${o.status=='waitConfirm' }">
-                                    <a href="foreconfirmPay?oid=${o.id}">
+                            <td valign="top" rowspan="${fn:length(o.orderItems)}" class="orderListItemButtonTD orderItemOrderInfoPartTD" width="120px">
+                                <c:if test="${o.state eq '待收货' }">
+                                    <a href="">
                                         <button class="orderListItemConfirm">确认收货</button>
                                     </a>
                                 </c:if>
-                                <c:if test="${o.status=='waitPay' }">
-                                    <a href="forealipay?oid=${o.id}&total=${o.total}">
+                                <c:if test="${o.state eq '待付款' }">
+                                    <a href="">
                                         <button class="orderListItemConfirm">付款</button>
                                     </a>
                                 </c:if>
 
-                                <c:if test="${o.status=='waitDelivery' }">
+                                <c:if test="${o.state eq '待发货' }">
                                     <span>待发货</span>
-                                    <%-- 									<button class="btn btn-info btn-sm ask2delivery" link="admin_order_delivery?id=${o.id}">催卖家发货</button> --%>
-
                                 </c:if>
 
-                                <c:if test="${o.status=='waitReview' }">
-                                    <a href="forereview?oid=${o.id}">
-                                        <button  class="orderListItemReview">评价</button>
-                                    </a>
+                                <c:if test="${o.state eq '完成' }">
+                                    <span>完成</span>
                                 </c:if>
                             </td>
                         </c:if>
