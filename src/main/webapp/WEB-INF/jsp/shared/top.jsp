@@ -16,13 +16,10 @@
 
     <span>欢迎来到Bookstore</span>
 
-    <c:if test="true">
-        <a href="#nowhere">退出</a>
-    </c:if>
 
     <c:if test="true">
-        <a href="#nowhere">请登录</a>
-        <a href="#nowhere">免费注册</a>
+        <a href="log">请登录</a>
+        <a href="req">免费注册</a>
     </c:if>
 
 
