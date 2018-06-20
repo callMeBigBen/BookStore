@@ -2,11 +2,13 @@ package bookStore.dao;
 
 import bookStore.domain.Book;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.PreparedStatement;
 import java.util.List;
 
@@ -19,9 +21,12 @@ public class BookDao
     public Book get(int id)
     {
         String sql = "SELECT * FROM book WHERE id = ?";
-        Book book = (Book) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper(Book.class), id);
-
-        return book;
+        try{
+            Book book = (Book) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper(Book.class), id);
+            return book;
+        }catch (EmptyResultDataAccessException e){
+            return null;
+        }
     }
 
     public List<Book> list()
@@ -42,5 +47,20 @@ public class BookDao
     public void delete(int id){
         String sql = "delete from book where id = "+id;
         jdbcTemplate.execute(sql);
+    }
+
+    public List<Book> getAllBooks()
+    {
+        String sql = "SELECT * FROM book";
+        List<Book> bookList = (List<Book>) jdbcTemplate.query(sql, new BeanPropertyRowMapper(Book.class));
+        return bookList;
+    }
+
+    public Book search(HttpServletRequest httpServletRequest)
+    {
+        String input = (String)httpServletRequest.getAttribute("searchInput");
+        String sql = "SELECT * FROM book WHERE bookname = ?";
+        Book book = (Book) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper(Book.class), input);
+        return book;
     }
 }

@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
+@RequestMapping("/admin")
 public class AdminController {
     @Autowired
     private BookService bookService;
@@ -128,10 +129,14 @@ public class AdminController {
     }
 
     @RequestMapping("/editAfterServiceRequest")
-    public ModelAndView editAfterServiceRequest(String id,String state)
+    public ModelAndView editAfterServiceRequest(int id)
     {
-        int aID = Integer.parseInt(id);
-        afterServiceService.modify(aID,state);
-        return afterServiceAdminPage();
+        AfterService afterService = afterServiceService.get(id);
+
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("admin/include/afterService/editAfterServicePage");
+        mv.addObject("afterService", afterService);
+
+        return mv;
     }
 }

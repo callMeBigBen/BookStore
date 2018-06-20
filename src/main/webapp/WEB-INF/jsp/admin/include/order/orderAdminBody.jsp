@@ -35,10 +35,10 @@
                     <td>${p.totalPrice}</td>
                     <td>${p.state}</td>
                     <td>${p.userId}</td>
-                    <td><a href="/BookStore/editOrderRequest?id=${p.id}"><span
+                    <td><a href="editOrderRequest?id=${p.id}"><span
                             class="glyphicon glyphicon-edit"></span></a></td>
                     <td><a deleteLink="true"
-                           href="/BookStore/deleteOrderRequest?id=${p.id}" onClick="show_confirm()"><span
+                           href="deleteOrderRequest?id=${p.id}" onClick="show_confirm()"><span
                             class="     glyphicon glyphicon-trash"></span></a></td>
 
                 </tr>

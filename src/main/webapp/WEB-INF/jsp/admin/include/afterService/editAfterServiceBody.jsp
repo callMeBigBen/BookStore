@@ -24,7 +24,7 @@
     <div class="panel panel-warning editDiv">
         <div class="panel-heading">编辑售后</div>
         <div class="panel-body">
-            <form method="post" id="editForm" action="/BookStore/editBookSubmit">
+            <form method="post" id="editForm" action="editBookSubmit">
                 <table class="editTable">
                     <tr>
                         <td>售后状态</td>

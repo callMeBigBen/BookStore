@@ -36,16 +36,16 @@ pageEncoding="UTF-8" isELIgnored="false" %>
                 <tr>
                     <td>${p.id}</td>
                     <td>
-                        <img width="40px" src="img/books/${p.id}.jpg">
+                        <img width="40px" src="../img/books/${p.id}.jpg">
                     </td>
                     <td>${p.bookName}</td>
                     <td>${p.description}</td>
                     <td>${p.price}</td>
                     <td>${p.remainNum}</td>
-                    <td><a href="/BookStore/editBookRequest?id=${p.id}"><span
+                    <td><a href="editBookRequest?id=${p.id}"><span
                             class="glyphicon glyphicon-edit"></span></a></td>
                     <td><a deleteLink="true"
-                           href="/BookStore/deleteBookRequest?id=${p.id}" onClick="show_confirm()"><span
+                           href="deleteBookRequest?id=${p.id}" onClick="show_confirm()"><span
                             class="     glyphicon glyphicon-trash"></span></a></td>
 
                 </tr>

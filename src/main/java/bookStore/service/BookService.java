@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Service
@@ -32,4 +33,12 @@ public class BookService
     public void delete(int id){
         bookDao.delete(id);
     }
+
+    public Book getBook(String id){
+        return bookDao.get(Integer.parseInt(id));
+    }
+
+    public List<Book> getAllBooks(){ return bookDao.getAllBooks();}
+
+    public Book search(HttpServletRequest httpServletRequest){ return bookDao.search(httpServletRequest);}
 }

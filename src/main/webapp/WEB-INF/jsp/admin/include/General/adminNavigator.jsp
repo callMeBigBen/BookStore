@@ -7,11 +7,11 @@
 
 <div class="navitagatorDiv" >
 	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-		<img style="margin-left:10px;margin-right:0px" class="pull-left" src="img/site/library.jpeg" height="45px">
+		<img style="margin-left:10px;margin-right:0px" class="pull-left" src="../img/site/library.jpeg" height="45px">
 		<a class="navbar-brand" href="#nowhere">BookStore后台</a>
-		<a class="navbar-brand" href="/BookStore/bookAdminPage">书籍管理</a>
-		<a class="navbar-brand" href="/BookStore/userAdminPage">用户管理</a>
-		<a class="navbar-brand" href="/BookStore/orderAdminPage">订单管理</a>
-		<a class="navbar-brand" href="/BookStore/afterServiceAdminPage">售后管理</a>
+		<a class="navbar-brand" href="bookAdminPage">书籍管理</a>
+		<a class="navbar-brand" href="userAdminPage">用户管理</a>
+		<a class="navbar-brand" href="orderAdminPage">订单管理</a>
+		<a class="navbar-brand" href="afterServiceAdminPage">售后管理</a>
 	</nav>
 </div>
