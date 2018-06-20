@@ -5,8 +5,9 @@
   Time: 10:06
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link href="/css/homePage.css" rel="stylesheet">
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+         pageEncoding="UTF-8" isELIgnored="false" %>
+<link href="/bookStore/css/homePage.css" rel="stylesheet">
 <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
 <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
@@ -18,8 +19,8 @@
 
 
     <c:if test="true">
-        <a href="log">请登录</a>
-        <a href="req">免费注册</a>
+        <a href="/bookStore/log">请登录</a>
+        <a href="/bookStore/req">免费注册</a>
     </c:if>
 
 

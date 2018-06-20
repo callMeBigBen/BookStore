@@ -7,7 +7,8 @@
   Time: 10:04
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+         pageEncoding="UTF-8" isELIgnored="false" %>
 <html>
 <head>
     <title>Title</title>
@@ -20,10 +21,9 @@
     <c:forEach items="${bookList}" var="book" varStatus="stc">
         <div class="productUnit" price="${book.price}">
             <div class="productUnitFrame">
-                <a href="/details/${book.id}">
-                    <img class="productImage" src="img/books/${book.category}-${book.id}.jpg">
+                <a href="/bookStore/details/${book.id}">
+                    <img class="productImage" src="/bookStore/img/books/${book.id}.jpg">
                 </a>
-
             </div>
         </div>
     </c:forEach>

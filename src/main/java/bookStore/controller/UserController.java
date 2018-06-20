@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @RequestMapping("loginChecker")
-    public ModelAndView log(@RequestParam("username") String username,
+    public String log(@RequestParam("username") String username,
                       @RequestParam("password") String password,
                       HttpSession session
     ) {
@@ -34,13 +34,14 @@ public class UserController {
         if (user != null) {
             if (user.getPassword().equals(password)) {
                 session.setAttribute("user",user);
-                return new ModelAndView("logAndReg/suc", "statu", "成功");//登陆成功 TODO
+                return "redirect:/";
+                //登陆成功 TODO
             } else {
                 String statu = "密码错误";
-                return new ModelAndView("logAndReg/statu", "statu", statu);
+                return "logAndReg/statu";
             }
         } else
-            return new ModelAndView("logAndReg/statu", "statu", "未注册");
+            return "logAndReg/statu";
     }
 
     @RequestMapping("regToBookStore")

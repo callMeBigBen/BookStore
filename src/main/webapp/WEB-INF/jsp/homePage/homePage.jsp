@@ -18,7 +18,7 @@
     <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
 
-    <link href="/css/homePage.css" rel="stylesheet">
+    <link href="css/homePage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -173,42 +173,42 @@
         <div class="categoryMenu" style="left: 419.5px; top: -510px">
             <div cid="1" class="eachCategory">
                 <span class="glyphicon glyphicon-link"></span>
-                <a href="/category/1">
+                <a href="category/1">
                     科幻小说
                 </a>
             </div>
 
             <div cid="2" class="eachCategory">
                 <span class="glyphicon glyphicon-link"></span>
-                <a href="/category/2">
+                <a href="category/2">
                     人文社科
                 </a>
             </div>
 
             <div cid="3" class="eachCategory">
                 <span class="glyphicon glyphicon-link"></span>
-                <a href="/category/3">
+                <a href="category/3">
                     人物传记
                 </a>
             </div>
 
             <div cid="4" class="eachCategory">
                 <span class="glyphicon glyphicon-link"></span>
-                <a href="/category/4">
+                <a href="category/4">
                     青春文学
                 </a>
             </div>
 
             <div cid="5" class="eachCategory">
                 <span class="glyphicon glyphicon-link"></span>
-                <a href="/category/5">
+                <a href="category/5">
                     成功励志
                 </a>
             </div>
 
             <div cid="6" class="eachCategory">
                 <span class="glyphicon glyphicon-link"></span>
-                <a href="/category/6">
+                <a href="category/6">
                     中学教辅
                 </a>
             </div>
@@ -259,19 +259,19 @@
 
         <div cid="1" class="productsAsideCategorys" style="left: 419.5px; display: none;">
             <div class="row show1">
-                <a href="/details/1">
+                <a href="details/1">
                     三体
                 </a>
-                <a href="/details/2">
+                <a href="details/2">
                     银河帝国
                 </a>
-                <a href="/details/3">
+                <a href="details/3">
                     沙丘
                 </a>
-                <a href="/details/4" style="color: rgb(135, 206, 250);">
+                <a href="details/4" style="color: rgb(135, 206, 250);">
                     神秘岛
                 </a>
-                <a href="/details/5">
+                <a href="details/5">
                     安德的游戏
                 </a>
                 <div class="seperator"></div>
@@ -282,19 +282,19 @@
         <div cid="2" class="productsAsideCategorys" style="left: 419.5px; display: none;">
 
             <div class="row show1">
-                <a href="/details/6">
+                <a href="details/6">
                     国家宝藏
                 </a>
-                <a href="/details/7" style="color: rgb(135, 206, 250);">
+                <a href="details/7" style="color: rgb(135, 206, 250);">
                     我们的孩子
                 </a>
-                <a href="/details/8">
+                <a href="details/8">
                     厚黑学
                 </a>
-                <a href="/details/9">
+                <a href="details/9">
                     乡土中国
                 </a>
-                <a href="/details/10">
+                <a href="details/10">
                     不列颠简明百科全书
                 </a>
                 <div class="seperator"></div>
@@ -302,19 +302,19 @@
         </div>
         <div cid="3" class="productsAsideCategorys" style="left: 419.5px; display: none;">
             <div class="row show1">
-                <a href="/details/11" style="color: rgb(135, 206, 250);">
+                <a href="details/11" style="color: rgb(135, 206, 250);">
                     王小波传
                 </a>
-                <a href="/details/12">
+                <a href="details/12">
                     金庸传
                 </a>
-                <a href="/details/13">
+                <a href="details/13">
                     奥黛丽赫本
                 </a>
-                <a href="/details/14">
+                <a href="details/14">
                     爱因斯坦传
                 </a>
-                <a href="/details/15">
+                <a href="details/15">
                     李嘉诚：我一生的理念
                 </a>
                 <div class="seperator"></div>
@@ -324,19 +324,19 @@
 
         <div cid="4" class="productsAsideCategorys" style="left: 419.5px; display: none;">
             <div class="row show1">
-                <a href="/details/16">
+                <a href="details/16">
                     听你的
                 </a>
-                <a href="/details/17">
+                <a href="details/17">
                     孤城闭
                 </a>
-                <a href="/details/18">
+                <a href="details/18">
                     无可替代的你
                 </a>
-                <a href="/details/19">
+                <a href="details/19">
                     半生温柔
                 </a>
-                <a href="/details/20">
+                <a href="details/20">
                     有人靠近，有人疏离
                 </a>
                 <div class="seperator"></div>
@@ -344,19 +344,19 @@
         </div>
         <div cid="5" class="productsAsideCategorys" style="left: 419.5px; display: none;">
             <div class="row show1">
-                <a href="/details/21">
+                <a href="details/21">
                     人性的弱点
                 </a>
-                <a href="/details/22">
+                <a href="details/22">
                     断舍离
                 </a>
-                <a href="/details/23">
+                <a href="details/23">
                     非暴力沟通
                 </a>
-                <a href="/details/24">
+                <a href="details/24">
                     生活需要仪式感
                 </a>
-                <a href="/details/25">
+                <a href="details/25">
                     愿你的青春不负梦想
                 </a>
                 <div class="seperator"></div>
@@ -364,19 +364,19 @@
         </div>
         <div cid="6" class="productsAsideCategorys" style="left: 419.5px; display: none;">
             <div class="row show1">
-                <a href="/details/26">
+                <a href="details/26">
                     中学教材全解
                 </a>
-                <a href="/details/27" style="color: rgb(135, 206, 250);">
+                <a href="details/27" style="color: rgb(135, 206, 250);">
                     5年高考，3年模拟
                 </a>
-                <a href="/details/28">
+                <a href="details/28">
                     金考卷
                 </a>
-                <a href="/details/29" style="color: rgb(135, 206, 250);">
+                <a href="details/29" style="color: rgb(135, 206, 250);">
                     试题调研
                 </a>
-                <a href="/details/30" style="color: rgb(135, 206, 250);">
+                <a href="details/30" style="color: rgb(135, 206, 250);">
                     新东方考研英语词汇
                 </a>
                 <div class="seperator"></div>
@@ -448,8 +448,8 @@
 
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m4.ddimg.cn/32/35/23579654-1_b_2.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m4.ddimg.cn/32/35/23579654-1_b_2.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     三体：全三册 刘慈欣代表作！
                 </span>
@@ -460,8 +460,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m2.ddimg.cn/24/35/23765172-1_b_8.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m2.ddimg.cn/24/35/23765172-1_b_8.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     银河帝国：基地七部曲。
                 </span>
@@ -472,8 +472,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m9.ddimg.cn/58/25/25169719-1_b_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m9.ddimg.cn/58/25/25169719-1_b_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     沙丘1-3大全集（套装共3册）
                 </span>
@@ -484,8 +484,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m8.ddimg.cn/64/9/23950738-1_b_2.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m8.ddimg.cn/64/9/23950738-1_b_2.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     神秘岛(北大翻译家陈筱卿权威译作)
                 </span>
@@ -496,8 +496,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m5.ddimg.cn/9/30/23973255-1_w_19.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m5.ddimg.cn/9/30/23973255-1_w_19.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     安德的游戏三部曲（全新典藏黑盒版）
                 </span>
@@ -519,8 +519,8 @@
 
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m0.ddimg.cn/37/6/25265530-1_w_8.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m0.ddimg.cn/37/6/25265530-1_w_8.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     国家宝藏：央视重磅综艺《国家宝藏》
                 </span>
@@ -531,8 +531,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m5.ddimg.cn/43/2/25090405-1_w_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m5.ddimg.cn/43/2/25090405-1_w_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     我们的孩子（雅理译丛）
                 </span>
@@ -543,8 +543,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m8.ddimg.cn/77/11/9214898-1_w_2.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m8.ddimg.cn/77/11/9214898-1_w_2.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     厚黑学(李宗吾著)
                 </span>
@@ -555,8 +555,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m9.ddimg.cn/41/30/23678069-1_w_6.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m9.ddimg.cn/41/30/23678069-1_w_6.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     乡土中国（精装修订版）
                 </span>
@@ -567,8 +567,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m7.ddimg.cn/33/19/23783397-1_w_1.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m7.ddimg.cn/33/19/23783397-1_w_1.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     不列颠简明百科全书（精粹本）
                 </span>
@@ -589,8 +589,8 @@
         <br>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m9.ddimg.cn/41/14/25226429-1_l_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m9.ddimg.cn/41/14/25226429-1_l_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     王小波传
                 </span>
@@ -601,8 +601,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m6.ddimg.cn/91/8/25220836-1_l_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m6.ddimg.cn/91/8/25220836-1_l_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     金庸传
                 </span>
@@ -613,8 +613,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m1.ddimg.cn/21/29/25233141-1_l_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m1.ddimg.cn/21/29/25233141-1_l_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     奥黛丽·赫本（新版·精装全彩典藏）
                 </span>
@@ -625,8 +625,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m6.ddimg.cn/27/16/23630436-1_l_1.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m6.ddimg.cn/27/16/23630436-1_l_1.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     爱因斯坦传
                 </span>
@@ -637,8 +637,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m2.ddimg.cn/47/15/23554622-1_w_1.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m2.ddimg.cn/47/15/23554622-1_w_1.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     李嘉诚：我一生的理念
                 </span>
@@ -658,8 +658,8 @@
         <br>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m9.ddimg.cn/91/0/25266079-1_l_12.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m9.ddimg.cn/91/0/25266079-1_l_12.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     听你的（张皓宸2018全新力作，销量突破30万册。）
                 </span>
@@ -670,8 +670,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m1.ddimg.cn/98/23/25274501-1_l_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m1.ddimg.cn/98/23/25274501-1_l_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     孤城闭（全二册）（典藏版）
                 </span>
@@ -682,8 +682,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m8.ddimg.cn/90/28/25197768-1_l_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m8.ddimg.cn/90/28/25197768-1_l_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     无可替代的你
                 </span>
@@ -694,8 +694,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m1.ddimg.cn/49/20/25247821-1_l_6.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m1.ddimg.cn/49/20/25247821-1_l_6.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     半生温柔
                 </span>
@@ -706,8 +706,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m7.ddimg.cn/84/13/25217067-1_w_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m7.ddimg.cn/84/13/25217067-1_w_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     有人靠近，有人疏离
                 </span>
@@ -728,8 +728,8 @@
         <br>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m0.ddimg.cn/23/18/23566280-1_w_4.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m0.ddimg.cn/23/18/23566280-1_w_4.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     人性的弱点（薛之谦推荐）
                 </span>
@@ -740,8 +740,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m3.ddimg.cn/68/20/23271503-1_w_1.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m3.ddimg.cn/68/20/23271503-1_w_1.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     断舍离
                 </span>
@@ -752,8 +752,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m1.ddimg.cn/44/26/23807861-1_w_1.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m1.ddimg.cn/44/26/23807861-1_w_1.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     非暴力沟通
                 </span>
@@ -764,8 +764,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m4.ddimg.cn/58/12/25209814-1_w_2.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m4.ddimg.cn/58/12/25209814-1_w_2.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     生活需要仪式感
                 </span>
@@ -776,8 +776,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m2.ddimg.cn/32/27/24156032-1_w_34.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m2.ddimg.cn/32/27/24156032-1_w_34.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     愿你的青春不负梦想
                 </span>
@@ -798,8 +798,8 @@
         <br>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m0.ddimg.cn/29/20/25264730-1_b_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m0.ddimg.cn/29/20/25264730-1_b_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     中学教材全解 九年级化学上
                 </span>
@@ -810,8 +810,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m4.ddimg.cn/29/13/25229684-1_w_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m4.ddimg.cn/29/13/25229684-1_w_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     五三 2019A版 高考语文
                 </span>
@@ -822,8 +822,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m5.ddimg.cn/98/18/25247375-1_w_6.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m5.ddimg.cn/98/18/25247375-1_w_6.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     2018押题卷·高考最后一卷
                 </span>
@@ -834,8 +834,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m9.ddimg.cn/88/12/25255879-1_w_3.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m9.ddimg.cn/88/12/25255879-1_w_3.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     试题调研 时政热点下
                 </span>
@@ -846,8 +846,8 @@
         </div>
 
         <div class="productItem">
-            <a href="/details/1"><img width="100px" src="http://img3m1.ddimg.cn/18/24/23653791-1_w_1.jpg"></a>
-            <a class="productItemDescLink" href="/details/1">
+            <a href="details/1"><img width="100px" src="http://img3m1.ddimg.cn/18/24/23653791-1_w_1.jpg"></a>
+            <a class="productItemDescLink" href="details/1">
                 <span class="productItemDesc">
                     新东方考研英语词汇词根+联想记忆法乱序版
                 </span>
