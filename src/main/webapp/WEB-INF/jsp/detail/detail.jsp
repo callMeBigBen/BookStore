@@ -14,19 +14,12 @@
     <title>Shoes Store - Product Detail</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link href="<%=request.getContextPath() %>/statis/css/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath() %>/css/templatemo_style.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statis/css/ddsmoothmenu.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/ddsmoothmenu.css" />
 
-    <script type="text/javascript" src="${pageContext.request.contextPath}/statis/js/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/statis/js/ddsmoothmenu.js">
-
-        /***********************************************
-         * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-         * This notice MUST stay intact for legal use
-         * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
-         ***********************************************/
-
+    <script type="text/javascript" src="${pageContext.request.contextPath}/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/ddsmoothmenu.js">
     </script>
 
     <script type="text/javascript">
@@ -41,9 +34,9 @@
 
     </script>
 
-    <script type="text/javascript" src="${pageContext.request.contextPath}/statis/js/jquery-1.4.3.min.js"></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/statis/css/slimbox2.css" type="text/css" media="screen" />
-    <script type="text/JavaScript" src="${pageContext.request.contextPath}/statis/js/slimbox2.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/slimbox2.css" type="text/css" media="screen" />
+    <script type="text/JavaScript" src="${pageContext.request.contextPath}/js/slimbox2.js"></script>
 
 
 </head>
@@ -68,7 +61,7 @@
         <div id="templatemo_menubar">
             <div id="top_nav" class="ddsmoothmenu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
                     <li><a href="products.html">Products</a>
                         <ul>
                             <li><a href="#submenu1">Sub menu 1</a></li>
