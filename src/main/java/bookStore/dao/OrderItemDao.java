@@ -8,6 +8,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class OrderItemDao
 {
@@ -37,5 +39,12 @@ public class OrderItemDao
         String sql = "UPDATE orderItem SET isAfterServiceOpened = 0 WHERE id = "+id;
 
         jdbcTemplate.update(sql);
+    }
+
+    public List<OrderItem> getByOrderId(String orderId) {
+        String sql = "SELECT * FROM orderItem WHERE orderId = ?";
+        List<OrderItem> orderItems = jdbcTemplate.query(sql, new BeanPropertyRowMapper(OrderItem.class), orderId);
+
+        return orderItems;
     }
 }
