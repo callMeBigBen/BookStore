@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class UserController {
     @Autowired
@@ -26,12 +29,16 @@ public class UserController {
 
     @RequestMapping("loginChecker")
     public String log(@RequestParam("username") String username,
-                      @RequestParam("password") String password
+                      @RequestParam("password") String password,
+                      HttpSession session
     ) {
         User user = userService.getByUsername(username);
         if (user != null) {
-            if (user.getPassword() == password) ;
-            return "redirect:index.jsp";
+            if (user.getPassword().equals(password)) {
+                session.setAttribute("user", user);
+                return "redirect:index.jsp";
+            }
+
         }
         return null;
     }
@@ -39,7 +46,8 @@ public class UserController {
     @RequestMapping("regToBookStore")
     public String reg(@RequestParam("username") String username,
                       @RequestParam("password") String password,
-                      @RequestParam("phone") String phone
+                      @RequestParam("phone") String phone,
+                      HttpSession session
     ) {
         User user = new User();
         user.setPassword(password);
@@ -47,6 +55,8 @@ public class UserController {
         user.setPhone(phone);
 
         userService.add(user);
+        session.setAttribute("user", user);
+
         return "redirect:index.jsp";
     }
 }
