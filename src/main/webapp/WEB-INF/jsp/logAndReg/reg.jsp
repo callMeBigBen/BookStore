@@ -27,7 +27,7 @@
             <br>
             <button type="submit" class="btn btn-primary btn-block btn-large" name="register">注册</button>
         </form>
-        <form action="/toLog" method="post">
+        <form action="log" method="post">
             <button type="submit" class="btn btn-primary btn-block btn-large" name="toRegister" onclick="toLoginPage()">
                 已有账号
             </button>

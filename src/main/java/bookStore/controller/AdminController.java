@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
+@RequestMapping("/admin")
 public class AdminController {
     @Autowired
     private BookService bookService;

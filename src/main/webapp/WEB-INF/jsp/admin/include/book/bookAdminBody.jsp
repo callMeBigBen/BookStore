@@ -36,7 +36,7 @@ pageEncoding="UTF-8" isELIgnored="false" %>
                 <tr>
                     <td>${p.id}</td>
                     <td>
-                        <img width="40px" src="img/books/${p.id}.jpg">
+                        <img width="40px" src="../img/books/${p.id}.jpg">
                     </td>
                     <td>${p.bookName}</td>
                     <td>${p.description}</td>

@@ -28,7 +28,7 @@
             <button type="submit" class="btn btn-primary btn-block btn-large" name="user">登录</button>
 
         </form>
-        <form action="toReg" method="post">
+        <form action="reg" method="post">
             <button type="submit" class="btn btn-primary btn-block btn-large" name="toRegister">
                 注册
             </button>
