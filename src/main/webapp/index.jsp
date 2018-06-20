@@ -1,7 +1,7 @@
 <html>
 <body>
-<h2 onclick="function x() {
-  this.
-}">Hello World!</h2>
+
+<jsp:forward page="./WEB-INF/jsp/homePage/homePage.jsp" />
+
 </body>
 </html>

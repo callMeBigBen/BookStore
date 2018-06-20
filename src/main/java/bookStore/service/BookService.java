@@ -36,4 +36,6 @@ public class BookService
     public Book getBook(String id){
         return bookDao.get(Integer.parseInt(id));
     }
+
+    public List<Book> getAllBooks(){ return bookDao.getAllBooks();}
 }

@@ -11,6 +11,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class BookController
@@ -32,5 +33,13 @@ public class BookController
         return modelAndView;
     }
 
-
+    @RequestMapping("/category/{bookCategory}")
+    public ModelAndView go2Category()
+    {
+        List<Book> bookList = bookService.getAllBooks();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("bookList", bookList);
+        modelAndView.setViewName("category/category");
+        return modelAndView;
+    }
 }

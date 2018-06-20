@@ -47,4 +47,11 @@ public class BookDao
         String sql = "delete from book where id = "+id;
         jdbcTemplate.execute(sql);
     }
+
+    public List<Book> getAllBooks()
+    {
+        String sql = "SELECT * FROM book";
+        List<Book> bookList = (List<Book>) jdbcTemplate.query(sql, new BeanPropertyRowMapper(Book.class));
+        return bookList;
+    }
 }

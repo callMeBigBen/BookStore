@@ -1,0 +1,64 @@
+.flq_head {
+    height: 35px;
+    padding-left: 27px;
+    font-size: 18px;
+    background: url(http://img3.ddimg.cn/00363/book2/fenl_bg.png) 7px 7px no-repeat;
+    line-height: 34px;
+    color: #863e18;
+    font-family: "Microsoft Yahei";
+    font-weight: bold;
+    position: relative;
+    width: 163px;
+    overflow: hidden;
+}
+
+div.categoryProducts {
+    padding: 0px 20px 40px 20px;
+}
+
+div.productUnit {
+    width: 225px;
+    height: 338px;
+    border: 3px solid #fff;
+    background-color: white;
+    margin: 12px 5px;
+    float: left;
+    padding: 0px;
+}
+
+div.productUnit:hover {
+    width: 225px;
+    border: 3px solid #C40000;
+    padding: 0px;
+}
+
+
+div.productUnit span.productUnitDesc {
+    font-size: 12px;
+    color: #666666;
+    display: block;
+    padding: 16px;
+}
+
+div.productUnitFrame{
+    border:1px solid #eee;
+}
+div.productUnitFrame:hover{
+    border:1px solid #C40000;
+}
+
+div.productUnit span.productPrice {
+    font-size: 20px;
+    color: #CC0000;
+    display: block;
+    padding-left: 4px;
+}
+
+div.productUnit span.productReview {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #EEEEEE;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #EEEEEE;
+}
