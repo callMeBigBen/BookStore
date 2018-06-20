@@ -35,13 +35,17 @@ public class UserController {
                       @RequestParam("password") String password,
                       @RequestParam("phone") String phone
     ) {
-        User user = new User();
-        user.setPassword(password);
-        user.setUserName(username);
-        user.setPhone(phone);
+        if(userService.getByUsername(username)==null) {
+            User user = new User();
+            user.setPassword(password);
+            user.setUserName(username);
+            user.setPhone(phone);
 
-        userService.add(user);
-        return "redirect:index.jsp";
+            userService.add(user);
+            return "logAndReg/suc";
+        }
+        else
+            return "logAndReg/regFail";
     }
 
     @RequestMapping("toReg")
