@@ -1,7 +1,5 @@
 package bookStore.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 public class User
 {
     private String userName;

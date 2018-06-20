@@ -1,6 +1,7 @@
 package bookStore.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -33,6 +34,14 @@ public class AfterServiceDao
         return afterService;
     }
 
+    public AfterService getByOrderItemId(int orderItemId) {
+        String sql = "SELECT * FROM afterService WHERE orderItemId = ?";
+
+        AfterService afterService = (AfterService) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper(AfterService.class), orderItemId);
+
+        return afterService;
+    }
+
     public void add(AfterService afterService)
     {
         String sql = "INSERT INTO afterService (num, type, reason, state, orderItemId)" +
@@ -48,7 +57,13 @@ public class AfterServiceDao
     {
         String sql = "SELECT id FROM afterService WHERE orderItemId = ?";
 
-        int id = jdbcTemplate.queryForObject(sql, Integer.class, orderItemId);
+        int id;
+        try {
+           id  = jdbcTemplate.queryForObject(sql, Integer.class, orderItemId);
+        }
+        catch (EmptyResultDataAccessException e){
+            return -1;
+        }
 
         return id;
     }
@@ -76,4 +91,5 @@ public class AfterServiceDao
         String sql = "Update afterService set state = '"+state+"' where id = "+id;
         jdbcTemplate.execute(sql);
     }
+
 }

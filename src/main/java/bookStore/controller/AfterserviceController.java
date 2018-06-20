@@ -59,9 +59,9 @@ public class AfterserviceController
     }
 
     @RequestMapping("afterServiceStatePage")
-    public ModelAndView afterServiceStatePage(int afterServiceId)
+    public ModelAndView afterServiceStatePage(int orderItemId)
     {
-        AfterService afterService = afterserviceService.get(afterServiceId);
+        AfterService afterService = afterserviceService.getByOrderItemId(orderItemId);
 
         ModelAndView mv = new ModelAndView();
         mv.setViewName("afterService/afterServiceStatePage");

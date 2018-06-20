@@ -1,5 +1,7 @@
 package bookStore.domain;
 
+import java.util.List;
+
 public class Order
 {
     public String getId()
@@ -59,5 +61,25 @@ public class Order
     public void setState(String state)
     {
         this.state = state;
+    }
+
+    private List<OrderItem> orderItems;
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
+
+    private int totalNum;
+
+    public int getTotalNum() {
+        return totalNum;
+    }
+
+    public void setTotalNum(int totalNum) {
+        this.totalNum = totalNum;
     }
 }
