@@ -31,7 +31,7 @@
 
     <c:if test="true">
         <a href="log">请登录</a>
-        <a href="req">免费注册</a>
+        <a href="reg">免费注册</a>
     </c:if>
 
 

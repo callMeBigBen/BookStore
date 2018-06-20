@@ -33,7 +33,7 @@ To change this template use File | Settings | File Templates.
     <script src="./js/login.js"></script>
 
     <div class="register" id="registerDiv" style="visibility: visible">
-        <form action="/toReg" method="post">
+        <form action="/reg" method="post">
             <button type="submit" class="btn btn-primary btn-block btn-large" name="toRegister">
                 注册失败
             </button>
