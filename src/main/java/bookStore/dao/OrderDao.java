@@ -22,6 +22,10 @@ public class OrderDao
         return order;
     }
 
+    public List<Order> getByUserId(int userId) {
+
+    }
+
     public List<Order> list()
     {
         String sql = "SELECT * FROM t_order";
