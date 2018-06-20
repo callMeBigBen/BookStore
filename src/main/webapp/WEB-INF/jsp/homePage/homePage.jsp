@@ -49,7 +49,7 @@
 <form action="foresearch" method="post">
 
     <div class="searchDiv">
-        <input name="keyword" type="text" value="" placeholder="C++ Primer">
+        <input name="keyword" type="text" value="" placeholder="三体" id="searchInput">
         <button type="submit" class="searchButton">搜索</button>
         <div class="searchBelow">
             <span><a href="#nowhere">科幻小说</a> <span>|</span></span>

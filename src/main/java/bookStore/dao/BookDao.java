@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.PreparedStatement;
 import java.util.List;
 
@@ -53,5 +54,13 @@ public class BookDao
         String sql = "SELECT * FROM book";
         List<Book> bookList = (List<Book>) jdbcTemplate.query(sql, new BeanPropertyRowMapper(Book.class));
         return bookList;
+    }
+
+    public Book search(HttpServletRequest httpServletRequest)
+    {
+        String input = (String)httpServletRequest.getAttribute("searchInput");
+        String sql = "SELECT * FROM book WHERE bookname = ?";
+        Book book = (Book) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper(Book.class), input);
+        return book;
     }
 }

@@ -42,4 +42,14 @@ public class BookController
         modelAndView.setViewName("category/category");
         return modelAndView;
     }
+
+    @RequestMapping("foresearch")
+    public ModelAndView serach(HttpServletRequest httpServletRequest)
+    {
+        Book book = bookService.search(httpServletRequest);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("book", book);
+        modelAndView.setViewName("detail/" + book.getId());
+        return  modelAndView;
+    }
 }
