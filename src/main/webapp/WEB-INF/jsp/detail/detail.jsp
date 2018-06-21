@@ -61,22 +61,15 @@
                             <td>${book.categoryId}</td>
                         </tr>
                         <tr>
-                            <td>Model:</td>
-                            <td>Product 14</td>
-                        </tr>
-                        <tr>
-                            <td>Manufacturer:</td>
-                            <td>Apple</td>
-                        </tr>
-                        <tr>
-                            <td>Quantity</td>
+                            <td>数量</td>
                             <td><input type="text" value="1" style="width: 20px; text-align: right" id="num"/></td>
                         </tr>
                     </table>
                     <div class="cleaner h20"></div>
-
-                    <a id="add2Cart" onclick="addCart()" class="addtocart"></a>
-
+<div id="buy-cart">
+                    <button id="add2Cart" onclick="addCart()" class="buy">添加至购物车</button>
+                    <button id="buy" class="buy">购买</button>
+</div>
                 </div>
                 <div class="cleaner h30"></div>
 

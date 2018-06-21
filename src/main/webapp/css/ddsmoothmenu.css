@@ -112,5 +112,24 @@ height: 0;
 .toplevelshadow{ /*shadow opacity. Doesn't work in IE*/
 opacity: 0.5;
 }
+tr{
+	font-size: 20px;
+}
+#add2Cart{
+	background-color: red;
+	font-size: 20px;
+	border: none;
+	color:white;
+	margin-right: 2em;
+}
+#buy{
+	background-color: red;
+	font-size: 20px;
+	border: none;
+	color:white;
+}
+#buy-cart{
+
+}
 
 /* menu */

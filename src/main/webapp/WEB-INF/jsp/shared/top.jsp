@@ -20,7 +20,7 @@
 
     <c:if test="true">
         <a href="/bookStore/log">请登录</a>
-        <a href="/bookStore/req">免费注册</a>
+        <a href="/bookStore/reg">免费注册</a>
     </c:if>
 
 
