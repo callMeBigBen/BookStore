@@ -34,7 +34,14 @@ public class AfterServiceService
     public AfterService get(int id)
     {
         AfterService afterService = afterserviceDao.get(id);
-//        afterService.setReason(afterService.getReason().replace("\n", "\\n"));
+        OrderItem orderItem = orderItemService.get(afterService.getOrderItemId());
+        afterService.setOrderItem(orderItem);
+
+        return afterService;
+    }
+
+    public AfterService getByOrderItemId(int orderItemId) {
+        AfterService afterService = afterserviceDao.getByOrderItemId(orderItemId);
         OrderItem orderItem = orderItemService.get(afterService.getOrderItemId());
         afterService.setOrderItem(orderItem);
 

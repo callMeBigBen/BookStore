@@ -10,7 +10,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -49,13 +48,28 @@ public class OrderItemDao
         jdbcTemplate.update(sql);
     }
 
-    public List<OrderItem> list()
-    {
+
+    public List<OrderItem> list() {
         String sql = "SELECT * FROM orderItem";
 
         List<OrderItem> orderItems = jdbcTemplate.query(sql, new BeanPropertyRowMapper(OrderItem.class));
+        return orderItems;
+    }
 
+    public boolean insert(String bookId,String num){
+        int count=Integer.parseInt(num);
+        int book=Integer.parseInt(bookId);
+        String sql="insert into orderItem (num,isAfterServiceOpened,bookId,userId) values ("+num+",0,"+book+",001)";
+        System.out.println(sql);
+        jdbcTemplate.execute(sql);
+        return true;
+    }
+
+    public List<OrderItem> getByOrderId(String orderId) {
+        String sql = "SELECT * FROM orderItem WHERE orderId = ?";
+        List<OrderItem> orderItems = jdbcTemplate.query(sql, new BeanPropertyRowMapper(OrderItem.class), orderId);
 
         return orderItems;
+
     }
 }

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 
     private String[] needAuthPages = new String[]{
-            "afterService"};
+            "afterService", "order/"};
 
     @Override
     public boolean preHandle(HttpServletRequest request,
@@ -22,6 +22,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
         HttpSession session = request.getSession();
 
+        System.out.println("进来了");
+
         for(String needAuthPage : needAuthPages)
         {
             if(uri.startsWith(needAuthPage))
@@ -29,7 +31,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
                 User user = (User) session.getAttribute("user");
                 if(user == null)
                 {
-                    response.sendRedirect("log");
+                    response.sendRedirect("/bookStore/log");
                     return false;
                 }
             }

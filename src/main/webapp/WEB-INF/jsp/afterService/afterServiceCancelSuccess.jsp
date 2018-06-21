@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" isELIgnored="false" %>
 
-<%@ include file="include/temporaryHeader.jsp" %>
+<%@ include file="../shared/temporaryHeader.jsp" %>
 
 <div class="alert alert-success" role="alert">
     售后服务已取消
 </div>
 
-<%@ include file="include/temporaryFooter.jsp" %>
+<%@ include file="../shared/temporaryFooter.jsp" %>

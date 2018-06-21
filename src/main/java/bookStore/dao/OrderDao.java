@@ -22,6 +22,13 @@ public class OrderDao
         return order;
     }
 
+    public List<Order> getByUserId(String userId) {
+        String sql = "SELECT * FROM t_order WHERE userId = ?";
+        List<Order> orders = jdbcTemplate.query(sql, new BeanPropertyRowMapper(Order.class), userId);
+
+        return orders;
+    }
+
     public List<Order> list()
     {
         String sql = "SELECT * FROM t_order";

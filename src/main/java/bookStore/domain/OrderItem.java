@@ -8,6 +8,15 @@ public class OrderItem
     private int bookId;
     private int orderId;
     private int userId;
+    private boolean isAfterServiceExisted;
+
+    public boolean getIsAfterServiceExisted() {
+        return isAfterServiceExisted;
+    }
+
+    public void setAfterServiceExisted(boolean afterServiceExisted) {
+        isAfterServiceExisted = afterServiceExisted;
+    }
 
     //数据库中不存在的字段
     private Book book;

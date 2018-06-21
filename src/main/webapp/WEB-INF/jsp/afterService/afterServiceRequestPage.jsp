@@ -8,6 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
     pageEncoding="UTF-8" isELIgnored="false" %>
 
-<%@ include file="include/temporaryHeader.jsp" %>
+<%@ include file="../shared/temporaryHeader.jsp" %>
 <%@ include file="include/afterServiceRequestBody.jsp" %>
-<%@ include file="include/temporaryFooter.jsp" %>
+<%@ include file="../shared/temporaryFooter.jsp" %>

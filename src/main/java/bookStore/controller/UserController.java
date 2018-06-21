@@ -34,7 +34,8 @@ public class UserController {
         if (user != null) {
             if (user.getPassword().equals(password)) {
                 session.setAttribute("user",user);
-                return "logAndReg/suc";//登陆成功 TODO
+                return "redirect:/";
+                //登陆成功 TODO
             } else {
                 String statu = "密码错误";
                 return "logAndReg/statu";
