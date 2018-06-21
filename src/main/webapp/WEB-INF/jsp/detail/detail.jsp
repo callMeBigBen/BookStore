@@ -48,7 +48,7 @@
             <div id="content" class="float_r">
                 <h1 id="${book.id}">${book.bookName}</h1>
                 <div class="content_half float_l">
-                    <a  rel="lightbox[portfolio]" href="images/product/10_l.jpg"><img src="images/product/10.jpg" alt="image" /></a>
+                    <a  rel="lightbox[portfolio]" href="${pageContext.request.contextPath}/img/books/${book.id}.jpg"><img src="${pageContext.request.contextPath}/img/books/${book.id}.jpg" alt="image" /></a>
                 </div>
                 <div class="content_half float_r">
                     <table>
