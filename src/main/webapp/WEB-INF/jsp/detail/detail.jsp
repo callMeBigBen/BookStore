@@ -67,8 +67,8 @@
                     </table>
                     <div class="cleaner h20"></div>
 <div id="buy-cart">
-                    <button id="add2Cart" onclick="addCart()" class="buy">添加至购物车</button>
-                    <button id="buy" class="buy">购买</button>
+    <a class="buyLink" href="/bookStore/buy?bookId=${book.id}"><button class="buyButton">立即购买</button></a>
+    <a href="javascript:addCart()" class="addCartLink"><button class="addCartButton"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</button></a>
 </div>
                 </div>
                 <div class="cleaner h30"></div>
@@ -80,25 +80,25 @@
 
                 <h3>相关商品</h3>
                 <div class="product_box">
-                    <a href="productdetail.html"><img src="images/product/01.jpg" alt="" /></a>
-                    <h3>Ut eu feugiat</h3>
+                    <a href="/details/2"><img src="${pageContext.request.contextPath}/img/books/2.jpg" alt="" /></a>
+                    <h3>银河帝国</h3>
                     <p class="product_price">$ 100</p>
-                    <a href="shoppingcart.html" class="addtocart"></a>
-                    <a href="productdetail.html" class="detail"></a>
+                    <a class="buyLink" href="/bookStore/buy?bookId=2"><button class="buyButton">立即购买</button></a>
+                    <a class="buyLink" href="/details/2"><button class="buyButton">详情</button></a>
                 </div>
                 <div class="product_box">
-                    <a href="productdetail.html"><img src="images/product/02.jpg" alt="" /></a>
-                    <h3>Curabitur et turpis</h3>
+                    <a href="/details/3"><img src="${pageContext.request.contextPath}/img/books/3.jpg" alt="" /></a>
+                    <h3>沙丘</h3>
                     <p class="product_price">$ 200</p>
-                    <a href="shoppingcart.html" class="addtocart"></a>
-                    <a href="productdetail.html" class="detail"></a>
+                    <a class="buyLink" href="/bookStore/buy?bookId=2"><button class="buyButton">立即购买</button></a>
+                    <a class="buyLink" href="/details/3"><button class="buyButton">详情</button></a>
                 </div>
                 <div class="product_box no_margin_right">
-                    <a href="productdetail.html"><img src="images/product/03.jpg" alt="" /></a>
-                    <h3>Mauris consectetur</h3>
+                    <a href="/details/4"><img src="${pageContext.request.contextPath}/img/books/4.jpg" alt="" /></a>
+                    <h3>神秘岛</h3>
                     <p class="product_price">$ 120</p>
-                    <a href="shoppingcart.html" class="addtocart"></a>
-                    <a href="productdetail.html" class="detail"></a>
+                    <a class="buyLink" href="/bookStore/buy?bookId=4"><button class="buyButton">立即购买</button></a>
+                    <a class="buyLink" href="/details/4"><button class="buyButton">详情</button></a>
                 </div>
             </div>
             <div class="cleaner"></div>
