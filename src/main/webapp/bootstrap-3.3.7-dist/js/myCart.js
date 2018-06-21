@@ -13,7 +13,7 @@ function minus(ID) {
         // IE6, IE5 ä¯ÀÀÆ÷Ö´ÐÐ´úÂë
         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","WEB-INF/jsp/admin/include/shoppingCart/minus.jsp?_ID="+ID,true);
+    xmlhttp.open("GET","WEB-INF/jsp/shoppingCart/minus.jsp?_ID="+ID,true);
     xmlhttp.send();
 }
 
@@ -29,7 +29,7 @@ function adding(ID) {
         // IE6, IE5 ä¯ÀÀÆ÷Ö´ÐÐ´úÂë
         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","WEB-INF/jsp/admin/include/shoppingCart/adding.jsp?_ID="+ID,true);
+    xmlhttp.open("GET","WEB-INF/jsp/shoppingCart/adding.jsp?_ID="+ID,true);
     xmlhttp.send();
 }
 
@@ -42,13 +42,13 @@ function changeNum(numId,flag,ID){/*numId±íÊ¾¶ÔÓ¦ÉÌÆ·ÊýÁ¿µÄÎÄ±¾¿òID£¬flag±íÊ¾ÊÇÔ
 			return false;
 			}
 		else{
-            minus(ID);
+            //minus(ID);
 			numId.value=parseInt(numId.value)-1;
 			productCount();
 			}
 		}
 	else{/*flagÎªadd£¬Ôö¼ÓÉÌÆ·ÊýÁ¿*/
-        adding(ID);
+        //adding(ID);
 		numId.value=parseInt(numId.value)+1;
 		productCount();
 		}
@@ -111,9 +111,9 @@ function selectSingle(){
 }
 
 /*É¾³ýµ¥ÐÐÉÌÆ·*/
-function deleteRow(rowId,ID){
+function deleteRow(rowId,id){
 	var Index=document.getElementById(rowId).rowIndex; //»ñÈ¡µ±Ç°ÐÐµÄË÷ÒýºÅ
-    deleteRowFromDB(ID);
+    //deleteRowFromDB(ID);
 	document.getElementById("shopping").deleteRow(Index);
 	productCount();
 }

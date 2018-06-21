@@ -37,7 +37,7 @@
 
     <span class="pull-right">
 			<a href="#nowhere">我的订单</a>
-			<a href="#nowhere">
+			<a href="/cart">
 			<span style="color:#C40000;margin:0px" class=" glyphicon glyphicon-shopping-cart redColor"></span>
 			购物车<strong>0</strong>件</a>
 		</span>

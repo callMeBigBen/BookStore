@@ -44,4 +44,13 @@
         <servlet-name>dispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>tiaozhuan</servlet-name>
+        <jsp-file>/WEB-INF/jsp/shoppingCart/mainShopping.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tiaozhuan</servlet-name>
+        <url-pattern>/mainShopping</url-pattern>
+    </servlet-mapping>
 </web-app>

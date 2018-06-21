@@ -1,5 +1,6 @@
 package bookStore.dao;
 
+import bookStore.domain.Book;
 import bookStore.domain.Order;
 import bookStore.domain.OrderItem;
 
@@ -9,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -51,7 +53,8 @@ public class OrderItemDao
     {
         String sql = "SELECT * FROM orderItem";
 
-        List<OrderItem> orderItems = jdbcTemplate.query(sql, new BeanPropertyRowMapper(Order.class));
+        List<OrderItem> orderItems = jdbcTemplate.query(sql, new BeanPropertyRowMapper(OrderItem.class));
+
 
         return orderItems;
     }
